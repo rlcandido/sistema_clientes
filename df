@@ -1,0 +1,23 @@
+[33mcommit b962efb88f11758eb6e66170ec6e100e670e9306[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Rogerio Candido <rogeriolucandido@gmail.com>
+Date:   Tue Sep 3 15:58:11 2019 -0300
+
+    adicionado DataBase.sql para Dump
+
+[33mcommit 16d56fc77bb4799129c53e66d883067f84d38b70[m
+Author: Rogerio Candido <rogeriolucandido@gmail.com>
+Date:   Tue Sep 3 15:56:17 2019 -0300
+
+    adicionado sistema de login view para login e autenticacao
+
+[33mcommit d1e0b7628f6bceb2b3653469d14313a7c99afdca[m
+Author: Rogerio Candido <rogeriolucandido@gmail.com>
+Date:   Tue Sep 3 15:26:37 2019 -0300
+
+    adicionado funcao para criptografar senha
+
+[33mcommit 240e15771004e6a5991227f6102f3da73f0633b9[m
+Author: Rogerio Candido <rogeriolucandido@gmail.com>
+Date:   Tue Sep 3 15:23:51 2019 -0300
+
+    criacao do projeto sistema_clientes
