@@ -38,44 +38,36 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Sistema Clientes</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Sistema Clientes</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>         
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+        </li>               
     </ul>
-                     <?php if($username) : ?>                                        
-                 <li class="nav-item"><?= $this->Html->link(_('Logout'),['controller' => 'Users', 'action' => 'logout'],['class' =>'btn btn-danger']) ?></li>
-                 <?php endif;?>
-
-
-
-  </div>
+    <?php if($username) : ?>                                        
+       <li class="nav-item"><?= $this->Html->link(_('Logout'),['controller' => 'Users', 'action' => 'logout'],['class' =>'btn btn-danger']) ?></li>
+   <?php endif;?>
+</div>
 </nav>
-    
 
 
-  
-    <div class="container-fluid">
-      <?= $this->Flash->render() ?>
-        <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-        <?= $this->fetch('content') ?>
-    </div><br><br>
-    
-    <footer>
+<div class="container-fluid">
+  <?= $this->Flash->render() ?>
+  <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+  <?= $this->fetch('content') ?>
+</div><br><br>
+
+<footer>
     <div class="card-footer bg-dark text-center text-white">
-    Desenvolvido por Rogério Candido
+        Desenvolvido por Rogério Candido
     </div>
-    </footer>
+</footer>
 
 
 </body>

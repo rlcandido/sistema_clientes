@@ -20,23 +20,34 @@
     });
 </script>
 
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Acão') ?></li>
-        <li><?= $this->Html->link(__('Lista Telefones'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Lista Clientes'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Novo Cliente'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="phones form large-9 medium-8 columns content">
+
+<div class="row">
+<div class="col-3">
+<div class="card">
+  <div class="card-header">
+    <b>Ação</b>
+  </div>
+  <ul class="list-group list-group-flush">    
+         <li class="list-group-item"><?= $this->Html->link(__('Lista Telefones'), ['action' => 'index']) ?></li>
+        <li class="list-group-item"><?= $this->Html->link(__('Lista Clientes'), ['controller' => 'Users', 'action' => 'index']) ?></li>
+        <li class="list-group-item"><?= $this->Html->link(__('Novo Cliente'), ['controller' => 'Users', 'action' => 'add']) ?></li>
+  </ul>
+</div>
+</div>        
+      
+
+<div class="col-7">
     <?= $this->Form->create($phone) ?>
     <fieldset>
         <legend><?= __('Adicionar Telefone') ?></legend>
+        <hr>
         <?php
             echo $this->Form->control('user_id', ['options' => $users]);
             echo $this->Form->control('phone');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Salvar')) ?>
+    <?= $this->Form->button(__('Salvar'),['class'=>'btn btn-primary']) ?>
     <?= $this->Form->end() ?>
+</div>
+<div class="col-2"></div>
 </div>

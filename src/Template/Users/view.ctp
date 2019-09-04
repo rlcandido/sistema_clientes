@@ -4,20 +4,30 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Ação') ?></li>
-        <li><?= $this->Html->link(__('Alterar Cliente'), ['action' => 'edit', $user->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Deletar Cliente'), ['action' => 'delete', $user->id], ['confirm' => __('Tem certeza que deseja deletar # {0}?', $user->id)]) ?> </li>
-        <li><?= $this->Html->link(__('Lista Clientes'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('Novo Cliente'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('Lista Telefones'), ['controller' => 'Phones', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('Novo Telefone'), ['controller' => 'Phones', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="users view large-9 medium-8 columns content">
+
+
+<div class="row">
+<div class="col-3">
+<div class="card">
+  <div class="card-header">
+    <b>Ação</b>
+  </div>
+  <ul class="list-group list-group-flush">
+        
+        <li class="list-group-item"><?= $this->Html->link(__('Alterar Cliente'), ['action' => 'edit', $user->id]) ?> </li>
+        <li class="list-group-item"><?= $this->Form->postLink(__('Deletar Cliente'), ['action' => 'delete', $user->id], ['confirm' => __('Tem certeza que deseja deletar # {0}?', $user->id)]) ?> </li>
+        <li class="list-group-item"><?= $this->Html->link(__('Lista Clientes'), ['action' => 'index']) ?> </li>
+        <li class="list-group-item"><?= $this->Html->link(__('Novo Cliente'), ['action' => 'add']) ?> </li>
+        <li class="list-group-item"><?= $this->Html->link(__('Lista Telefones'), ['controller' => 'Phones', 'action' => 'index']) ?> </li>
+        <li class="list-group-item"><?= $this->Html->link(__('Novo Telefone'), ['controller' => 'Phones', 'action' => 'add']) ?> </li>
+  </ul>
+</div>
+</div>
+
+
+<div class="col-9">
     <h3><?= h($user->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table table-hover table-striped">
         <tr>
             <th scope="row"><?= __('Nome_Cliente') ?></th>
             <td><?= h($user->username) ?></td>
@@ -46,7 +56,7 @@
     <div class="related">
         <h4><?= __('Relação Telefones') ?></h4>
         <?php if (!empty($user->phones)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table class="table table-hover table-striped">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Cliente Id') ?></th>
@@ -59,13 +69,14 @@
                 <td><?= h($phones->user_id) ?></td>
                 <td><?= h($phones->phone) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Phones', 'action' => 'view', $phones->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Phones', 'action' => 'edit', $phones->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Phones', 'action' => 'delete', $phones->id], ['confirm' => __('Tem certeza que deseja deletar # {0}?', $phones->id)]) ?>
+                    <?= $this->Html->link(__('Ver'), ['controller' => 'Phones', 'action' => 'view', $phones->id]) ?>
+                    <?= $this->Html->link(__('Editar'), ['controller' => 'Phones', 'action' => 'edit', $phones->id]) ?>
+                    <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Phones', 'action' => 'delete', $phones->id], ['confirm' => __('Tem certeza que deseja deletar # {0}?', $phones->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
         </table>
         <?php endif; ?>
     </div>
+</div>
 </div>
