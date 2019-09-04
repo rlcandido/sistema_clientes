@@ -10,7 +10,7 @@
 <div class="row">
 <div class="col-3">
 
-<div class="card" style="width: 18rem;">
+<div class="card">
   <div class="card-header">
     <b>Ação</b>
   </div>
@@ -46,5 +46,3 @@
 
 </div>
 <div class="col-5"></div>
-<br>
-<br>
