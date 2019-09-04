@@ -21,10 +21,11 @@
 </div>
 
 
-<div class="col-9">
+<div class="col-7">
     <?= $this->Form->create($user) ?>
     <fieldset>
         <legend><?= __('Adicionar Cliente') ?></legend>
+        <hr>
         <?php
             echo $this->Form->control('username');
             echo $this->Form->control('email');
@@ -37,4 +38,5 @@
     <?= $this->Form->button(__('Salvar'),['class' => 'btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>
+<div class="col-2"></div>
 </div>
