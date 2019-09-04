@@ -51,7 +51,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </li>               
     </ul>
     <?php if($username) : ?>                                        
-       <li class="nav-item"><?= $this->Fa->link('sign-out',_(' Log out'),['controller' => 'Users', 'action' => 'logout'],['class' =>'btn btn-danger']) ?></li>
+       <li class="nav-item"><?= $this->Fa->link('sign-out',_(' Log out'),['controller' => 'Users', 'action' => 'logout'],['class' =>'btn btn-primary']) ?></li>
    <?php endif;?>
 </div>
 </nav>

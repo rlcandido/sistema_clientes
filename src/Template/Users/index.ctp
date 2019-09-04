@@ -43,24 +43,27 @@
                     <td><?= h($user->address) ?></td>
                     <td><?= $this->Number->format($user->status) ?></td>
                     <td class="actions">
-                        <?= $this->Fa->link('search',__('|'), ['action' => 'view', $user->id], ['class'=> 'text-primary']) ?>
-                        <?= $this->Fa->link('pencil',__('|'), ['action' => 'edit', $user->id], ['class'=> 'text-success']) ?>
-                        <?= $this->Form->postLink(__('| X'), ['action' => 'delete', $user->id], ['class'=>'text-danger'], ['confirm' => __('Tem certeza que deseja deletar # {0}?', $user->id)]) ?>
+                        <?= $this->Fa->link('search',__(''), ['action' => 'view', $user->id], ['class'=> 'btn btn-primary']) ?>
+                        <?= $this->Fa->link('pencil',__(''), ['action' => 'edit', $user->id], ['class'=> 'btn btn-success']) ?>
+                        <?= $this->Form->postLink(__('X'), ['action' => 'delete', $user->id], ['class'=>'btn btn-danger'], ['confirm' => __('Tem certeza que deseja deletar # {0}?', $user->id)]) ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-    <div class="paginator">
+    <nav aria-label="...">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('primeiro')) ?>
-            <?= $this->Paginator->prev('< ' . __('anterior')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('próximo') . ' >') ?>
-            <?= $this->Paginator->last(__('ultimo') . ' >>') ?>
+            
+            <li class="page-item"><?= $this->Paginator->prev('< ' . __('anterior') ,['class'=>'page-link']) ?></li>
+            <?= $this->Paginator->numbers(['before'=>'' ,'after'=>''],['class'=>'page-item']) ?>
+            <li class="page-item"><?= $this->Paginator->next(__('próximo') . ' >', ['class'=>'page-link']) ?></li>
+            
         </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Pagina {{page}} de {{pages}}, mostrando {{current}} registro(s) do {{count}} total')]) ?></p>
-    </div>
+        <p><?= $this->Paginator->counter() ?></p>
+    </nav>
+
+
+
 </div>
 
 </div>
