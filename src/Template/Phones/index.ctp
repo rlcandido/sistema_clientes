@@ -7,18 +7,18 @@
 
 
 <div class="row">
-<div class="col-3">
-<div class="card">
-  <div class="card-header">
-    <b>Ação</b>
-  </div>
-  <ul class="list-group list-group-flush">    
-        
-        <li class="list-group-item"><?= $this->Html->link(__('Novo Telefone'), ['action' => 'add']) ?></li>
-        <li class="list-group-item"><?= $this->Html->link(__('Lista Clientes'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li class="list-group-item"><?= $this->Html->link(__('Novo Cliente'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-  </ul>
-</div>
+    <div class="col-3">
+        <div class="card">
+          <div class="card-header">
+            <b>Ação</b>
+        </div>
+        <ul class="list-group list-group-flush">    
+            
+            <li class="list-group-item"><?= $this->Html->link(__('Novo Telefone'), ['action' => 'add']) ?></li>
+            <li class="list-group-item"><?= $this->Html->link(__('Lista Clientes'), ['controller' => 'Users', 'action' => 'index']) ?></li>
+            <li class="list-group-item"><?= $this->Html->link(__('Novo Cliente'), ['controller' => 'Users', 'action' => 'add']) ?></li>
+        </ul>
+    </div>
 </div>
 
 <div class="col-9">
@@ -34,16 +34,16 @@
         </thead>
         <tbody>
             <?php foreach ($phones as $phone): ?>
-            <tr>
-                <td><?= $this->Number->format($phone->id) ?></td>
-                <td><?= $phone->has('user') ? $this->Html->link($phone->user->username, ['controller' => 'Users', 'action' => 'view', $phone->user->id]) : '' ?></td>
-                <td><?= h($phone->phone) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('Ver'), ['action' => 'view', $phone->id]) ?>
-                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $phone->id]) ?>
-                    <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $phone->id], ['confirm' => __('Tem certeza que deseja deletar # {0}?', $phone->id)]) ?>
-                </td>
-            </tr>
+                <tr>
+                    <td><?= $this->Number->format($phone->id) ?></td>
+                    <td><?= $phone->has('user') ? $this->Html->link($phone->user->username, ['controller' => 'Users', 'action' => 'view', $phone->user->id]) : '' ?></td>
+                    <td><?= h($phone->phone) ?></td>
+                    <td class="actions">
+                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $phone->id]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $phone->id]) ?>
+                        <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $phone->id], ['confirm' => __('Tem certeza que deseja deletar # {0}?', $phone->id)]) ?>
+                    </td>
+                </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
