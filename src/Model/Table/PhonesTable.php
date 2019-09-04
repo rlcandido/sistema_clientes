@@ -56,7 +56,7 @@ class PhonesTable extends Table
 
         $validator
             ->scalar('phone')
-            ->maxLength('phone', 11)
+            ->maxLength('phone', 15)
             ->requirePresence('phone', 'create')
             ->notEmptyString('phone');
 

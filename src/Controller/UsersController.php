@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Users Controller
@@ -12,6 +13,25 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->allow('add');
+    }
+
+
+    public function isAuthorized($user) {
+        if (parent::isAuthorized($user)) {           
+            if (in_array($this->action, array('edit', 'delete'))) {
+                return false;
+            }
+        }
+        return false;
+    }
+ 
+
+
     /**
      * Index method
      *
