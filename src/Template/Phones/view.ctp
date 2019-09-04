@@ -6,13 +6,13 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Phone'), ['action' => 'edit', $phone->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Phone'), ['action' => 'delete', $phone->id], ['confirm' => __('Are you sure you want to delete # {0}?', $phone->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Phones'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Phone'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
+        <li class="heading"><?= __('Ação') ?></li>
+        <li><?= $this->Html->link(__('Alterar Telefone'), ['action' => 'edit', $phone->id]) ?> </li>
+        <li><?= $this->Form->postLink(__('Deletar Telefone'), ['action' => 'delete', $phone->id], ['confirm' => __('Tem certeza que deseja deletar # {0}?', $phone->id)]) ?> </li>
+        <li><?= $this->Html->link(__('Lista Telefones'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Novo Telefone'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Lista Clientes'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Novo Cliente'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="phones view large-9 medium-8 columns content">

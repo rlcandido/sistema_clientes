@@ -4,21 +4,47 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="users form large-9 medium-8 columns content">
+
+
+
+<div class="row">
+<div class="col-3">
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    <b>Ação</b>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><?= $this->Html->link(__('Lista Clientes'), ['action' => 'index']) ?></li>
+  </ul>
+</div>
+
+</div>
+<div class="col-4">
+<div class="card text-white bg-dark">
+  <div class="card-header">
+<legend><?= __('Login') ?></legend>
+  </div>
+  <div class="card-body">
+
     <?= $this->Form->create() ?>
     <fieldset>
-        <legend><?= __('Login') ?></legend>
+        
         <?php
             echo $this->Form->control('email');            
             echo $this->Form->control('password');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Entrar')) ?>
+    
+    </div>
+    <div class="card-footer">
+    <?= $this->Form->button(__('Entrar'),['class' => 'btn btn-primary btn-block text-white']) ?>        
+    </div>
     <?= $this->Form->end() ?>
+
 </div>
+
+</div>
+<div class="col-5"></div>
+<br>
+<br>

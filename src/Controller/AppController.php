@@ -28,6 +28,10 @@ use Cake\Event\Event;
 class AppController extends Controller
 {
 
+    public $paginate = [
+        'limit' => 5
+    ];
+
     /**
      * Initialization hook method.
      *
@@ -43,7 +47,7 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler', [
             'enableBeforeRedirect' => false,
-        ]);
+        ]);        
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
             'authenticate' => [
