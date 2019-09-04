@@ -40,5 +40,6 @@ class AppView extends View
     {
         //parent::initialize();
         $this->initializeUI(['layout' => false]);
+        $this->loadHelper('FontAwesome.Fa');
     }
 }

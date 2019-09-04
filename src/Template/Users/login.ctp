@@ -15,20 +15,21 @@
             <b>Ação</b>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"><?= $this->Html->link(__('Lista Clientes'), ['action' => 'index']) ?></li>
+            <li class="list-group-item"><?= $this->Fa->link('book',__('Lista Clientes'), ['action' => 'index']) ?></li>
         </ul>
     </div>
 
 </div>
+<div class="col-1"></div>
 <div class="col-4">
     <div class="card text-white bg-dark">
       <div class="card-header">
-        <legend><?= __('Login') ?></legend>
+        <legend><?= __('Log in') ?></legend>
     </div>
     <div class="card-body">
 
         <?= $this->Form->create() ?>
-        <fieldset>
+        <fieldset>        
             
             <?php
             echo $this->Form->control('email');            
@@ -45,4 +46,4 @@
 </div>
 
 </div>
-<div class="col-5"></div>
+<div class="col-4"></div>

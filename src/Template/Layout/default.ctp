@@ -28,7 +28,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     
     <?= $this->Html->css('bootstrap.min.css') ?>
-    <?= $this->Html->css('font-awesome.min.css') ?>    
+    <?= $this->Html->css('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') ?>    
     <?= $this->Html->script('bootstrap.min.js') ?>
     <?= $this->Html->script('jquery-3.4.1.min.js') ?>
     <?= $this->Html->script('jquery.mask.js') ?>
@@ -51,7 +51,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </li>               
     </ul>
     <?php if($username) : ?>                                        
-       <li class="nav-item"><?= $this->Html->link(_('Logout'),['controller' => 'Users', 'action' => 'logout'],['class' =>'btn btn-danger']) ?></li>
+       <li class="nav-item"><?= $this->Fa->link('sign-out',_(' Log out'),['controller' => 'Users', 'action' => 'logout'],['class' =>'btn btn-danger']) ?></li>
    <?php endif;?>
 </div>
 </nav>

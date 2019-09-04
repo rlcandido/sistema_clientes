@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc9521857f31668cb2edab1bbae099d5",
+    "content-hash": "0d5f4766ec36f8a26c8578687b60570a",
     "packages": [
         {
             "name": "aura/intl",
@@ -291,6 +291,47 @@
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
             "time": "2019-07-25T15:43:38+00:00"
+        },
+        {
+            "name": "drmonkeyninja/cakephp-font-awesome",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drmonkeyninja/cakephp-font-awesome.git",
+                "reference": "35d88f4f4231bda2bc4ed7c78eb77123811a0084"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drmonkeyninja/cakephp-font-awesome/zipball/35d88f4f4231bda2bc4ed7c78eb77123811a0084",
+                "reference": "35d88f4f4231bda2bc4ed7c78eb77123811a0084",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "FontAwesome\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Carter",
+                    "role": "Author"
+                }
+            ],
+            "description": "CakePHP helper for creating Font Awesome links",
+            "homepage": "https://github.com/drmonkeyninja/cakephp-font-awesome",
+            "keywords": [
+                "cakephp",
+                "helper"
+            ],
+            "time": "2017-02-17T10:44:42+00:00"
         },
         {
             "name": "friendsofcake/bootstrap-ui",
